@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { CustomCursor } from "@/components/custom_cursor";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { AIChat } from "@/components/ai_chatbot";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +32,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="min-h-screen bg-background text-white selection:bg-white selection:text-black font-sans relative antialiased">
+          {/* Global Effects */}
+          <div className="noise-overlay" />
+          <CustomCursor />
+
+          {/* Layout Shell */}
+          <Navbar />
+          <main className="flex flex-col relative z-10">{children}</main>
+          <Footer />
+          <AIChat />
+        </div>
       </body>
     </html>
   );
