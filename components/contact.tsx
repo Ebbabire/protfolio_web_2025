@@ -1,5 +1,3 @@
-import React from "react";
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { PERSONAL_INFO, SOCIALS } from "../constants";
 
@@ -9,10 +7,10 @@ export const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-20">
           <p className="text-gray-500 uppercase tracking-widest mb-4">
-            What's Next?
+            What&apos;s Next?
           </p>
           <h2 className="text-6xl md:text-9xl font-display font-bold uppercase leading-[0.8] tracking-tighter mb-12">
-            Let's work <br />
+            Let&apos;s work <br />
             <span className="text-gray-600 group hover:text-white transition-colors cursor-pointer">
               Together
             </span>

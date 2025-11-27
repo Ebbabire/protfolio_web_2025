@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Globe, Cpu, Coffee, Zap } from "lucide-react";
-import { PERSONAL_INFO } from "../constants";
+import { PERSONAL_INFO, SOCIALS } from "../constants";
 
 import profile from "@/app/assets/profile.png";
 import Image from "next/image";
@@ -41,7 +41,20 @@ export const About: React.FC = () => {
               </p>
             </div>
             <div className="mt-8">
-              <span className="text-sm font-mono text-gray-500">EST. 2021</span>
+              {/* <span className="text-sm font-mono text-gray-500">EST. 2021</span> */}
+              <div className="flex gap-8 mb-8 md:mb-0">
+                {SOCIALS.slice(0, 2).map((social) => (
+                  <a
+                    key={social.platform}
+                    href={social.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-400 hover:text-white uppercase tracking-wider text-3xl transition-colors"
+                  >
+                    {<social.icon />}
+                  </a>
+                ))}
+              </div>
             </div>
           </motion.div>
 

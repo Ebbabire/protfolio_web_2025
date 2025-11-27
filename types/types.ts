@@ -1,4 +1,5 @@
 import { LucideIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
 import { IconType } from "react-icons";
 
 export interface Project {
@@ -6,7 +7,7 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
-  imageUrl: string;
+  imageUrl: StaticImageData;
   demoUrl?: string;
   repoUrl?: string;
 }
