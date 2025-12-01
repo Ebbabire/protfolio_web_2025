@@ -12,10 +12,10 @@ import rydbieDahsboard from "@/app/assets/rydbie_dashboar.jpeg";
 
 export const PERSONAL_INFO = {
   name: "Ebba Birhanu",
-  role: "Full Stack Engineer",
+  role: "Lead Developer",
   tagline: "Building digital experiences that matter.",
   bio: " A CTO and a Senior Frontend Architect specializing in scalable React, Next.js, and TypeScript ecosystems. Combining a mechanical engineering background with a passion for design systems, I bridge the gap between engineering and design to build high-performance interfaces that are as maintainable as they are fluid.",
-  location: "Addis Ababa, Ethiopia", // Assumed based on name origin, adjustable
+  location: "Addis Ababa, Ethiopia",
   email: "ebba.birhanu@gmail.com",
 };
 

@@ -33,7 +33,7 @@ export const About: React.FC = () => {
               <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mb-6">
                 <Globe className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-2xl font-bold mb-4">Philosophy</h4>
+              {/* <h4 className="text-2xl font-bold mb-4">Philosophy</h4> */}
               <p className="text-gray-400 text-lg leading-relaxed">
                 {PERSONAL_INFO.bio} I bridge the gap between engineering and
                 design, believing that the best digital products feel natural,

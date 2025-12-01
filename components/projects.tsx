@@ -63,7 +63,7 @@ export const Projects: React.FC = () => {
                       {project.description}
                     </p>
                   </div>
-                  <div className="flex gap-2 mt-4 md:mt-0">
+                  <div className="flex gap-2 mt-4 flex-wrap md:mt-0">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}

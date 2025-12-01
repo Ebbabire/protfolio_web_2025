@@ -8,7 +8,7 @@ export const Skills: React.FC = () => {
   return (
     <section className="py-20 border-y border-white/5 bg-black overflow-hidden">
       {/* Forward Marquee */}
-      <div className="relative flex overflow-x-hidden mb-8">
+      <div className="relative flex  mb-8">
         <div className="animate-marquee whitespace-nowrap flex gap-16 items-center">
           {marqueeSkills.map((skill, i) => (
             <div key={i} className="flex items-center gap-4 group">
@@ -33,7 +33,7 @@ export const Skills: React.FC = () => {
       </div>
 
       {/* Reverse Marquee (Optional: Visual variety) */}
-      <div className="relative flex overflow-x-hidden">
+      <div className="relative flex ">
         <div className="animate-marquee-reverse whitespace-nowrap flex gap-16 items-center">
           {marqueeSkills.map((skill, i) => (
             <div key={i} className="flex items-center gap-4 group">

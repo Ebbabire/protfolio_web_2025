@@ -78,7 +78,7 @@ export const Navbar: React.FC = () => {
                 className="text-sm font-medium uppercase tracking-widest text-gray-400 hover:text-white transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-1px bg-white transition-all group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all group-hover:w-full" />
               </a>
             ))}
           </div>
