@@ -6,12 +6,12 @@ export async function POST(req: Request) {
   const data = await req.json();
   const { name, email, message } = data;
 
-  const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const data = await resend.emails.send({
       from: `Portfolio Contact <onboarding@resend.dev>`,
-      to: process.env.NEXT_PUBLIC_TO_EMAIL || "ebba.birhanu@gmail.com",
+      to: process.env.TO_EMAIL || "ebba.birhanu@gmail.com",
       subject: `Portfolio Contact from ${name}`,
       text: `Hello,
 
