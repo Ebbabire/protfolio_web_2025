@@ -5,10 +5,9 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 
-import rydbie from "@/app/assets/rydbie_landin.jpeg";
+import rydbie from "./app/assets/rydbie_landin.jpeg";
 import tapstore from "@/app/assets/tapstore_landin.jpeg";
 import moteregna from "@/app/assets/moteregna_dashboard2.png";
-import rydbieDahsboard from "@/app/assets/rydbie_dashboar.jpeg";
 
 export const PERSONAL_INFO = {
   name: "Ebba Birhanu",
@@ -46,21 +45,21 @@ export const PROJECTS: Project[] = [
     demoUrl: "https://tapstoreet.com",
     repoUrl: "",
   },
-  {
-    id: "3",
-    title: "Rydbie Admin Dashboard",
-    description:
-      "The central administration dashboard for Rydbie, a digital driving school platform, serving as the command center for managing operations between learner drivers and certified instructors. The system streamlines critical workflows, including the verification of instructor credentials, oversight of master lesson schedules, and the tracking of student progress to ensure compliance with Ministry of Transportation (MTO) certification standards. Additionally, the dashboard manages financial operations by automating instructor payouts and processing transaction packages, acting as the operational bridge that keeps the student and instructor mobile apps synchronized.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Recharts",
-    ],
-    imageUrl: rydbieDahsboard,
-    repoUrl: "",
-  },
+  // {
+  //   id: "3",
+  //   title: "Rydbie Admin Dashboard",
+  //   description:
+  //     "The central administration dashboard for Rydbie, a digital driving school platform, serving as the command center for managing operations between learner drivers and certified instructors. The system streamlines critical workflows, including the verification of instructor credentials, oversight of master lesson schedules, and the tracking of student progress to ensure compliance with Ministry of Transportation (MTO) certification standards. Additionally, the dashboard manages financial operations by automating instructor payouts and processing transaction packages, acting as the operational bridge that keeps the student and instructor mobile apps synchronized.",
+  //   technologies: [
+  //     "React",
+  //     "TypeScript",
+  //     "Tailwind CSS",
+  //     "Shadcn UI",
+  //     "Recharts",
+  //   ],
+  //   imageUrl: rydbieDahsboard,
+  //   repoUrl: "",
+  // },
   {
     id: "4",
     title: "Moteregna Admin Dashboard",

@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
           hasScrolled
-            ? "py-4 bg-background/80 backdrop-blur-md border-b border-white/5"
+            ? "py-4 bg-background/80 backdrop-blur-md border-b border-foreground/10"
             : "py-8 bg-transparent"
         }`}
       >
@@ -75,17 +75,17 @@ export const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-sm font-medium uppercase tracking-widest text-gray-400 hover:text-white transition-colors relative group"
+                className="text-sm font-medium uppercase tracking-widest text-foreground/70 hover:text-foreground transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-foreground transition-all group-hover:w-full" />
               </a>
             ))}
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-white"
+            className="md:hidden p-2 text-foreground"
           >
             <Menu className="w-6 h-6" />
             <span className="sr-only">menu</span>
@@ -99,11 +99,11 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center space-y-8"
+            className="fixed inset-0 z-40 bg-background flex flex-col items-center justify-center space-y-8"
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-8 right-8 p-2 text-white"
+              className="absolute top-8 right-8 p-2 text-foreground"
             >
               <X className="w-8 h-8" />
               <span className="sr-only">close</span>
@@ -114,7 +114,7 @@ export const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-5xl font-display font-bold uppercase text-white hover:text-gray-500 transition-colors"
+                className="text-5xl font-display font-bold uppercase text-foreground hover:text-accent transition-colors"
               >
                 {link.name}
               </a>

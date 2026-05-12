@@ -14,7 +14,7 @@ export const Projects: React.FC = () => {
           <h2 className="text-5xl md:text-8xl font-display font-bold uppercase tracking-tighter">
             Selected <br /> Works
           </h2>
-          <p className="text-gray-400 mb-2">(Feb 2025 - Present)</p>
+          <p className="text-foreground/70 mb-2">(Feb 2025 - Present)</p>
         </div>
 
         <div className="space-y-32">
@@ -54,12 +54,12 @@ export const Projects: React.FC = () => {
                   )}
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-start border-t border-white/20 pt-6">
+                <div className="flex flex-col md:flex-row justify-between items-start border-t border-foreground/20 pt-6">
                   <div>
                     <h3 className="text-3xl font-bold uppercase mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 max-w-xl">
+                    <p className="text-foreground/70 max-w-xl">
                       {project.description}
                     </p>
                   </div>
@@ -67,7 +67,7 @@ export const Projects: React.FC = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-4 py-1 border border-white/20 rounded-full text-xs uppercase tracking-wider text-gray-400"
+                        className="px-4 py-1 border border-foreground/20 rounded-full text-xs uppercase tracking-wider text-foreground/70"
                       >
                         {tech}
                       </span>

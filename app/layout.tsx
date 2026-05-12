@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen bg-background text-white selection:bg-white selection:text-black font-sans relative antialiased">
+        <div className="min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background font-sans relative antialiased">
           {/* Global Effects */}
           <div className="noise-overlay" />
           <CustomCursor />

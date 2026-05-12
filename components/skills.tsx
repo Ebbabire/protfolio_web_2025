@@ -6,13 +6,13 @@ export const Skills: React.FC = () => {
   const marqueeSkills = [...SKILLS, ...SKILLS, ...SKILLS];
 
   return (
-    <section className="py-20 border-y border-white/5 bg-black overflow-hidden">
+    <section className="py-20 border-y border-foreground/10 bg-background overflow-hidden">
       {/* Forward Marquee */}
       <div className="relative flex  mb-8">
         <div className="animate-marquee whitespace-nowrap flex gap-16 items-center">
           {marqueeSkills.map((skill, i) => (
             <div key={i} className="flex items-center gap-4 group">
-              <span className="text-4xl md:text-6xl font-display font-bold text-transparent text-stroke-1 hover:text-white transition-colors duration-300 uppercase opacity-50 hover:opacity-100">
+              <span className="text-4xl md:text-6xl font-display font-bold text-transparent text-stroke-1 hover:text-foreground transition-colors duration-300 uppercase opacity-50 hover:opacity-100">
                 {skill.name}
               </span>
               <span className="text-2xl text-accent">✦</span>
@@ -23,7 +23,7 @@ export const Skills: React.FC = () => {
         <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex gap-16 items-center">
           {marqueeSkills.map((skill, i) => (
             <div key={`dup-${i}`} className="flex items-center gap-4 group">
-              <span className="text-4xl md:text-6xl font-display font-bold text-transparent text-stroke-1 hover:text-white transition-colors duration-300 uppercase opacity-50 hover:opacity-100">
+              <span className="text-4xl md:text-6xl font-display font-bold text-transparent text-stroke-1 hover:text-foreground transition-colors duration-300 uppercase opacity-50 hover:opacity-100">
                 {skill.name}
               </span>
               <span className="text-2xl text-accent">✦</span>
@@ -37,10 +37,10 @@ export const Skills: React.FC = () => {
         <div className="animate-marquee-reverse whitespace-nowrap flex gap-16 items-center">
           {marqueeSkills.map((skill, i) => (
             <div key={i} className="flex items-center gap-4 group">
-              <span className="text-2xl md:text-4xl font-sans font-light text-gray-600 hover:text-white transition-colors duration-300 uppercase">
+              <span className="text-2xl md:text-4xl font-sans font-light text-foreground/60 hover:text-foreground transition-colors duration-300 uppercase">
                 {skill.category}
               </span>
-              <span className="w-2 h-2 rounded-full bg-gray-700"></span>
+              <span className="w-2 h-2 rounded-full bg-foreground/40"></span>
             </div>
           ))}
         </div>
@@ -48,7 +48,7 @@ export const Skills: React.FC = () => {
 
       <style>{`
         .text-stroke-1 {
-          -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+          -webkit-text-stroke: 1px color-mix(in oklab, var(--foreground) 45%, transparent);
         }
         @keyframes marquee {
           0% { transform: translateX(0); }

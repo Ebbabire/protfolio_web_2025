@@ -115,26 +115,26 @@ export const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="mb-20">
-          <p className="text-gray-400 uppercase tracking-widest mb-4">
+          <p className="text-foreground/70 uppercase tracking-widest mb-4">
             What&apos;s Next?
           </p>
           <h2 className="text-6xl md:text-9xl font-display font-bold uppercase leading-[0.8] tracking-tighter mb-12">
             Let&apos;s work <br />
-            <span className="text-gray-600">Together</span>
+            <span className="text-foreground/70">Together</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-t border-white/10 pt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-t border-foreground/10 pt-16">
           {/* Left Column: Contact Info */}
           <div className="space-y-12 flex flex-col justify-between">
             <div className="space-y-12">
               <div>
-                <h4 className="text-gray-400 uppercase tracking-widest text-sm mb-4">
+                <h4 className="text-foreground/70 uppercase tracking-widest text-sm mb-4">
                   Drop a line
                 </h4>
                 <a
                   href={`mailto:${PERSONAL_INFO.email}`}
-                  className="text-2xl md:text-4xl font-light text-white hover:text-gray-300 transition-colors inline-flex items-center gap-2 group"
+                  className="text-2xl md:text-4xl font-light text-foreground hover:text-accent transition-colors inline-flex items-center gap-2 group"
                 >
                   {PERSONAL_INFO.email}
                   <ArrowRight className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
@@ -142,7 +142,7 @@ export const Contact: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="text-gray-400 uppercase tracking-widest text-sm mb-4">
+                <h4 className="text-foreground/70 uppercase tracking-widest text-sm mb-4">
                   Socials
                 </h4>
                 <div className="flex gap-8">
@@ -152,17 +152,17 @@ export const Contact: React.FC = () => {
                       href={social.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-lg text-white hover:text-gray-400 uppercase tracking-wider transition-colors relative group"
+                      className="text-lg text-foreground hover:text-accent uppercase tracking-wider transition-colors relative group"
                     >
                       {social.platform}
-                      <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all group-hover:w-full" />
+                      <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all group-hover:w-full" />
                     </a>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 text-gray-400 text-sm font-mono flex items-center gap-2">
+            <div className="pt-8 text-foreground/70 text-sm font-mono flex items-center gap-2">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               ADDIS ABABA, ETHIOPIA • {time}
             </div>
@@ -173,7 +173,7 @@ export const Contact: React.FC = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white/10 p-8 md:p-12 rounded-3xl border border-white/20 backdrop-blur-sm"
+            className="bg-foreground/5 p-8 md:p-12 rounded-3xl border border-foreground/20 backdrop-blur-sm"
           >
             <form onSubmit={handleSubmit} className="space-y-8" noValidate>
               <div className="space-y-2 group">
@@ -183,7 +183,7 @@ export const Contact: React.FC = () => {
                     className={`text-xs uppercase tracking-widest transition-colors ${
                       errors.name
                         ? "text-red-400"
-                        : "text-gray-400 group-focus-within:text-white"
+                        : "text-foreground/70 group-focus-within:text-foreground"
                     }`}
                   >
                     Name
@@ -204,10 +204,10 @@ export const Contact: React.FC = () => {
                 <input
                   type="text"
                   id="name"
-                  className={`w-full bg-transparent border-b py-4 text-white text-xl focus:outline-none transition-colors placeholder-white/25 ${
+                  className={`w-full bg-transparent border-b py-4 text-foreground text-xl focus:outline-none transition-colors placeholder:text-foreground/55 ${
                     errors.name
                       ? "border-red-500/50 focus:border-red-500"
-                      : "border-white/20 focus:border-white"
+                      : "border-foreground/20 focus:border-foreground"
                   }`}
                   placeholder="Your Name"
                   value={form.name}
@@ -225,7 +225,7 @@ export const Contact: React.FC = () => {
                     className={`text-xs uppercase tracking-widest transition-colors ${
                       errors.email
                         ? "text-red-400"
-                        : "text-gray-400 group-focus-within:text-white"
+                        : "text-foreground/70 group-focus-within:text-foreground"
                     }`}
                   >
                     Email
@@ -246,10 +246,10 @@ export const Contact: React.FC = () => {
                 <input
                   type="email"
                   id="email"
-                  className={`w-full bg-transparent border-b py-4 text-white text-xl focus:outline-none transition-colors placeholder-white/25 ${
+                  className={`w-full bg-transparent border-b py-4 text-foreground text-xl focus:outline-none transition-colors placeholder:text-foreground/55 ${
                     errors.email
                       ? "border-red-500/50 focus:border-red-500"
-                      : "border-white/20 focus:border-white"
+                      : "border-foreground/20 focus:border-foreground"
                   }`}
                   placeholder="your@email.com"
                   value={form.email}
@@ -267,7 +267,7 @@ export const Contact: React.FC = () => {
                     className={`text-xs uppercase tracking-widest transition-colors ${
                       errors.message
                         ? "text-red-400"
-                        : "text-gray-400 group-focus-within:text-white"
+                        : "text-foreground/70 group-focus-within:text-foreground"
                     }`}
                   >
                     Message
@@ -288,10 +288,10 @@ export const Contact: React.FC = () => {
                 <textarea
                   id="message"
                   rows={4}
-                  className={`w-full bg-transparent border-b py-4 text-white text-xl focus:outline-none transition-colors placeholder-white/25 resize-none ${
+                  className={`w-full bg-transparent border-b py-4 text-foreground text-xl focus:outline-none transition-colors placeholder:text-foreground/55 resize-none ${
                     errors.message
                       ? "border-red-500/50 focus:border-red-500"
-                      : "border-white/20 focus:border-white"
+                      : "border-foreground/20 focus:border-foreground"
                   }`}
                   placeholder="Tell me about your project..."
                   value={form.message}
@@ -306,7 +306,7 @@ export const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={status !== "idle"}
-                  className="group relative inline-flex items-center gap-4 text-xl uppercase tracking-wider text-white disabled:opacity-50"
+                  className="group relative inline-flex items-center gap-4 text-xl uppercase tracking-wider text-foreground disabled:opacity-50"
                 >
                   <span className="relative z-10 flex items-center gap-3">
                     {status === "idle" && (
@@ -326,7 +326,7 @@ export const Contact: React.FC = () => {
                       </span>
                     )}
                   </span>
-                  <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-disabled:w-0" />
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full group-disabled:w-0" />
                 </button>
               </div>
             </form>

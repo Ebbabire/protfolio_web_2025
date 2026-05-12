@@ -86,19 +86,19 @@ export const AIChat: React.FC = () => {
             initial={{ opacity: 0, y: 100, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.9 }}
-            className="fixed bottom-6 right-6 w-full max-w-sm bg-surface border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col max-h-[600px]"
+            className="fixed bottom-6 right-6 w-full max-w-sm bg-surface border border-foreground/10 rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col max-h-[600px]"
           >
             {/* Header */}
-            <div className="p-4 bg-primary/10 border-b border-white/10 flex justify-between items-center">
+            <div className="p-4 bg-primary/10 border-b border-foreground/10 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-white">
+                <h3 className="font-semibold text-foreground">
                   Ebba's AI Assistant
                 </h3>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 <X className="w-5 h-5" />
                 <span className="sr-only">close</span>
@@ -106,7 +106,7 @@ export const AIChat: React.FC = () => {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#0F0F0F] min-h-[300px]">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-foreground/5 min-h-[300px]">
               {messages.map((msg, idx) => (
                 <div
                   key={idx}
@@ -118,7 +118,7 @@ export const AIChat: React.FC = () => {
                     className={`max-w-[80%] p-3 rounded-2xl text-sm ${
                       msg.role === "user"
                         ? "bg-primary text-white rounded-br-none"
-                        : "bg-white/10 text-gray-200 rounded-bl-none"
+                        : "bg-foreground/10 text-foreground rounded-bl-none"
                     } ${msg.isError ? "bg-red-500/20 text-red-200" : ""}`}
                   >
                     {msg.text}
@@ -127,8 +127,8 @@ export const AIChat: React.FC = () => {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="bg-white/10 p-3 rounded-2xl rounded-bl-none">
-                    <Loader2 className="w-5 h-5 animate-spin text-gray-400" />
+                  <div className="bg-foreground/10 p-3 rounded-2xl rounded-bl-none">
+                    <Loader2 className="w-5 h-5 animate-spin text-foreground/70" />
                   </div>
                 </div>
               )}
@@ -138,7 +138,7 @@ export const AIChat: React.FC = () => {
             {/* Input */}
             <form
               onSubmit={handleSend}
-              className="p-4 bg-surface border-t border-white/10"
+              className="p-4 bg-surface border-t border-foreground/10"
             >
               <div className="relative">
                 <input
@@ -146,20 +146,20 @@ export const AIChat: React.FC = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask about my experience..."
-                  className="w-full bg-black/20 text-white placeholder-gray-500 border border-white/10 rounded-xl py-3 pl-4 pr-12 focus:outline-none focus:border-primary/50"
+                  className="w-full bg-foreground/10 text-foreground placeholder:text-foreground/50 border border-foreground/10 rounded-xl py-3 pl-4 pr-12 focus:outline-none focus:border-primary/50"
                   disabled={isLoading}
                 />
                 <button
                   type="submit"
                   disabled={isLoading || !input.trim()}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-primary hover:text-white disabled:opacity-50 disabled:hover:text-primary transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-primary hover:text-foreground disabled:opacity-50 disabled:hover:text-primary transition-colors"
                 >
                   <Send className="w-5 h-5" />
                   <span className="sr-only">send</span>
                 </button>
               </div>
               <div className="text-center mt-2">
-                <p className="text-[10px] text-gray-600">
+                <p className="text-[10px] text-foreground/70">
                   Powered by Google Gemini 2.5 Flash
                 </p>
               </div>

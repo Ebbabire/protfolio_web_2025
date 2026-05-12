@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="overflow-hidden"
         >
-          <h2 className="text-xl md:text-2xl font-light text-gray-400 mb-4 tracking-widest uppercase">
+          <h2 className="text-xl md:text-2xl font-light text-foreground/70 mb-4 tracking-widest uppercase">
             Lead Web Developer
           </h2>
         </motion.div>
@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-7xl md:text-[10rem] font-display font-bold leading-[0.9] tracking-tighter text-white uppercase mix-blend-difference"
+            className="text-7xl md:text-[10rem] font-display font-bold leading-[0.9] tracking-tighter text-foreground uppercase"
           >
             Ebba
           </motion.h1>
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="text-7xl md:text-[10rem] font-display font-bold leading-[0.9] tracking-tighter text-gray-500 uppercase mix-blend-difference"
+            className="text-7xl md:text-[10rem] font-display font-bold leading-[0.9] tracking-tighter text-foreground/60 uppercase"
           >
             Birhanu
           </motion.h1>
@@ -64,9 +64,9 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 1 }}
-          className="mt-12 flex flex-col md:flex-row justify-between items-end border-t border-white/10 pt-8"
+          className="mt-12 flex flex-col md:flex-row justify-between items-end border-t border-foreground/10 pt-8"
         >
-          <p className="max-w-md text-lg text-gray-400 leading-relaxed">
+          <p className="max-w-md text-lg text-foreground/70 leading-relaxed">
             Crafting digital experiences with a focus on motion, aesthetics, and
             performance. Reimagining the web, one pixel at a time.
           </p>
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
             onClick={scrollToContent}
             className="hidden md:flex gap-4 cursor-pointer group"
           >
-            <span className="text-sm font-mono text-gray-500 group-hover:text-white transition-colors">
+            <span className="text-sm font-mono text-foreground/70 group-hover:text-foreground transition-colors">
               SCROLL TO EXPLORE
             </span>
           </div>
@@ -89,7 +89,7 @@ export const Hero: React.FC = () => {
         onClick={scrollToContent}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer p-4 hover:scale-110 transition-transform"
       >
-        <ArrowDown className="w-6 h-6 animate-bounce text-white/50" />
+        <ArrowDown className="w-6 h-6 animate-bounce text-foreground/50" />
       </motion.div>
     </section>
   );
