@@ -1,4 +1,4 @@
-import { Code2, Database, Layout, Server, Cpu, Globe } from "lucide-react";
+import { Code2, Database, Layout, Globe } from "lucide-react";
 
 import { Project, Skill, SocialLink } from "./types/types";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -23,13 +23,15 @@ export const PROJECTS: Project[] = [
     id: "1",
     title: "Rydbie",
     description:
-      "A modern, Canadian online driving school platform designed to simplify driver education. It connects learner drivers with certified instructors through a user-friendly website and mobile app. It is a tech-forward alternative to traditional driving schools, aiming to make learning to drive in Canada more accessible, transparent, and convenient",
+      "Booking platform for a Toronto driving school. As frontend lead, I built the student site from the first commit and led the admin dashboard staff use to run lessons, instructors and payouts. Highlights: a data-driven booking checkout that ends in Stripe Checkout, instructor availability turned into bookable lesson slots in Toronto time, and server-side pagination across 14 admin lists.",
     technologies: [
       "Next.js",
+      "React",
       "TypeScript",
+      "TanStack Query",
       "Tailwind CSS",
-      "Shadcn UI",
-      "Recharts",
+      "Stripe",
+      "Sanity",
     ],
     imageUrl: rydbie,
     demoUrl: "https://rydbie.com",
@@ -39,8 +41,15 @@ export const PROJECTS: Project[] = [
     id: "2",
     title: "Tapstore",
     description:
-      "An Ethiopian digital marketplace and e-commerce platform. The website aims to provide users with a faster shopping experience, real-time updates, and exclusive offers. It features a sleek, user-friendly interface designed to enhance the online shopping experience for Ethiopian consumers.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+      "Ethiopian shoe marketplace. I built the buyer storefront and the admin site. Shoppers filter the catalogue, pick a size and colour with live stock limits, apply promo codes and pay by cash on delivery, in-app coins or Chapa, then track each order to delivery. The admin covers product and seller approval, order management and revenue dashboards.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "TanStack Query",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Chapa",
+    ],
     imageUrl: tapstore,
     demoUrl: "https://tapstoreet.com",
     repoUrl: "",
@@ -64,7 +73,7 @@ export const PROJECTS: Project[] = [
     id: "4",
     title: "Moteregna Admin Dashboard",
     description:
-      "A centralized Admin Dashboard for Moteregna Transport, Ethiopia's first 100% electric delivery and logistics platform. This web-based control center serves as the brain of the operation, allowing the management team to monitor the entire lifecycle of deliveries, manage a fleet of electric motorbikes, and oversee driver-user interactions in real-time.",
+      "Operations dashboard for Moteregna Transport, Ethiopia's first 100% electric delivery and logistics platform. I led development of the control center the team uses to track rides and revenue, manage drivers and users, schedule trips and handle withdrawals.",
     technologies: [
       "React",
       "TypeScript",
@@ -81,11 +90,11 @@ export const SKILLS: Skill[] = [
   { name: "React / Next.js", category: "Frontend", icon: Layout },
   { name: "TypeScript", category: "Frontend", icon: Code2 },
   { name: "Tailwind CSS", category: "Frontend", icon: Layout },
-  { name: "Node.js", category: "Backend", icon: Server },
-  { name: "PostgreSQL", category: "Backend", icon: Database },
-  { name: "GraphQL", category: "Backend", icon: Globe },
-  { name: "Gemini API", category: "AI", icon: Cpu },
-  { name: "Docker", category: "Tools", icon: Server },
+  { name: "shadcn/ui", category: "Frontend", icon: Layout },
+  { name: "TanStack Query", category: "Data", icon: Database },
+  { name: "Stripe", category: "Integrations", icon: Globe },
+  { name: "Chrome Extensions", category: "Integrations", icon: Globe },
+  { name: "Vitest", category: "Testing", icon: Code2 },
 ];
 
 export const SOCIALS: SocialLink[] = [

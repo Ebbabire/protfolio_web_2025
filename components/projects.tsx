@@ -28,7 +28,7 @@ export const Projects: React.FC = () => {
               className="group"
             >
               <div>
-                <div className="relative w-full h-[60vh] md:h-[60vh] overflow-hidden rounded-lg mb-8">
+                <div className="relative w-full aspect-16/10 md:aspect-auto md:h-[60vh] overflow-hidden rounded-lg mb-8">
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
 

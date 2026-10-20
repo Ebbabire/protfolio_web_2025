@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
           className="overflow-hidden"
         >
           <h2 className="text-xl md:text-2xl font-light text-foreground/70 mb-4 tracking-widest uppercase">
-            Lead Web Developer
+            Senior Frontend Engineer
           </h2>
         </motion.div>
 

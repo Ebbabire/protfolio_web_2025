@@ -1,27 +1,32 @@
 import { Metadata } from "next";
 
-// 1. Define your base URL (Replace with your actual domain)
-const baseUrl = "https://www.ebbabirhanu.vercel.app";
+// 1. Define your base URL
+export const baseUrl = "https://ebbabirhanu.com";
 
 export const meta: Metadata = {
   metadataBase: new URL(baseUrl),
+  // Canonical URL: tells search engines ebbabirhanu.com is the main address
+  alternates: {
+    canonical: "/",
+  },
   // 2. Title Template: Changes "Home" to "Home | Ebba Birhanu" automatically
   title: {
-    default: "Ebba Birhanu | Front-end Developer & Team Lead",
+    default: "Ebba Birhanu | Senior Frontend Engineer",
     template: "%s | Ebba Birhanu",
   },
   // 3. Your specific description
   description:
-    "Experienced in creating user-focused, high-performance websites and applications. Specializing in admin dashboard panels and leading teams to deliver functional digital solutions.",
+    "Senior frontend engineer and CTO building React and Next.js products end to end: booking and payment flows, operations dashboards and clinical tools.",
 
   // 4. Keywords for SEO ranking
   keywords: [
     "Ebba Birhanu",
-    "Lead Web Developer",
-    "Admin Dashboard Specialist",
+    "Senior Frontend Engineer",
     "React Developer",
-    "Next.js Portfolio",
-    "Web Development Team Lead",
+    "Next.js Developer",
+    "TypeScript",
+    "CTO",
+    "Remote Frontend Engineer",
     "Ethiopia Developer",
   ],
 
@@ -34,9 +39,9 @@ export const meta: Metadata = {
     type: "website",
     locale: "en_US",
     url: baseUrl,
-    title: "Ebba Birhanu | Lead Web Developer",
+    title: "Ebba Birhanu | Senior Frontend Engineer",
     description:
-      "Specializing in building high-performance admin dashboards and scalable web applications.",
+      "React and Next.js products from first commit to production: booking and payment flows, operations dashboards and clinical tools.",
     siteName: "Ebba Birhanu Portfolio",
     images: [
       {
@@ -51,9 +56,9 @@ export const meta: Metadata = {
   // 7. Twitter Card (How links look on Twitter/X)
   twitter: {
     card: "summary_large_image",
-    title: "Ebba Birhanu | Lead Web Developer",
+    title: "Ebba Birhanu | Senior Frontend Engineer",
     description:
-      "Building user-focused, high-performance websites and admin panels.",
+      "React and Next.js products from first commit to production: booking and payment flows, operations dashboards and clinical tools.",
     images: ["/og-image.png"],
   },
 

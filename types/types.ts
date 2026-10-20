@@ -14,7 +14,7 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  category: "Frontend" | "Backend" | "Tools" | "AI";
+  category: "Frontend" | "Data" | "Integrations" | "Testing";
   icon?: LucideIcon;
 }
 
