@@ -8,6 +8,7 @@ import { CgMail } from "react-icons/cg";
 import rydbie from "./app/assets/rydbie_landin.jpeg";
 import tapstore from "@/app/assets/tapstore_landin.jpeg";
 import moteregna from "@/app/assets/moteregna_dashboard2.png";
+import ecoAddis from "@/app/assets/eco_addis_dashboard.jpeg";
 
 export const PERSONAL_INFO = {
   name: "Ebba Birhanu",
@@ -35,6 +36,23 @@ export const PROJECTS: Project[] = [
     ],
     imageUrl: rydbie,
     demoUrl: "https://rydbie.com",
+    repoUrl: "",
+  },
+  {
+    id: "5",
+    title: "Eco Addis",
+    description:
+      "Operations portal for an Ethiopian marketplace, delivery and ride-hailing platform, where staff approve sellers, manage orders and run day-to-day operations. As frontend lead, I rebuilt order management around per-product fulfilment across multiple sellers, replaced permission lists scattered across 49 pages with one route-to-permission map aligned to backend roles, and normalized API errors in a single Axios interceptor.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "React Query",
+      "Axios",
+      "Tailwind CSS",
+      "React Hook Form",
+    ],
+    imageUrl: ecoAddis,
     repoUrl: "",
   },
   {
